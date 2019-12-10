@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
                     (DBConnectionManager) getServletContext().getAttribute("connectionManager"));
             isValidUser = loginService.isvalid();
         }finally {
-            if(isValidUser && Boolean.valueOf(request.getParameter("username"))){
+            if(isValidUser && Boolean.valueOf(request.getParameter("remember"))){
                 Cookie cookie = new Cookie("username",username);
                 cookie.setMaxAge(7*24*60*60);
                 response.addCookie(cookie);

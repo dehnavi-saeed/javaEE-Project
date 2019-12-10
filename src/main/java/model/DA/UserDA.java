@@ -27,8 +27,9 @@ public class UserDA extends GenericDA<User> {
             statement.setString(1, user.getUsername());
             statement.setString(2, user.getPassword());
             resultSet = statement.executeQuery();
-            if (((ResultSetImpl) resultSet).getUpdateCount() == 1) {
-                resultSet.next();
+            resultSet.next();
+            if (resultSet.getRow() == 1) {
+
                 user.setId(resultSet.getInt("id"));
                 user.setRole(resultSet.getString("role"));
                 user.setState(resultSet.getInt("state"));
