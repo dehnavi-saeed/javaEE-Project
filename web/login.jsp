@@ -22,7 +22,7 @@
     <form class="form-signin" action="login" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputUserName" class="sr-only">User Name</label>
-        <input type="text" id="inputUserName" class="form-control" placeholder="Email address" name="username" required autofocus>
+        <input type="text" id="inputUserName" class="form-control" placeholder="User Name" name="username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
         <div class="checkbox">

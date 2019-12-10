@@ -10,15 +10,15 @@
 
     <context-param>
         <param-name>dbURL</param-name>
-        <param-value>"jdbc:mysql://localhost:3306/testse"</param-value>
+        <param-value>jdbc:mysql://localhost:3306/test</param-value>
     </context-param>
     <context-param>
         <param-name>dbUser</param-name>
-        <param-value>"root"</param-value>
+        <param-value>tnc</param-value>
     </context-param>
     <context-param>
         <param-name>dbPassword</param-name>
-        <param-value>""</param-value>
+        <param-value>123</param-value>
     </context-param>
 
     <servlet>
@@ -60,5 +60,12 @@
         <error-code>404</error-code>
         <location>/errorHandler</location>
     </error-page>
+
+
+    <listener>
+        <listener-class>
+            observer.AppContextListener
+        </listener-class>
+    </listener>
 
 </web-app>

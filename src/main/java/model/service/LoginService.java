@@ -8,8 +8,7 @@ public class LoginService {
     private User user;
     private DBConnectionManager manager;
     public LoginService(String username, String password, DBConnectionManager manager) {
-        user.setUsername(username);
-        user.setPassword(password);
+        user = new User(username,password,"admin");
         this.manager=manager;
     }
     public boolean isvalid(){
